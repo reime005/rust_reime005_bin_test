@@ -11,6 +11,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
+          components: clippy
           override: true
 
       - name: Check
@@ -78,7 +79,7 @@ jobs:
             asset_name: rust_reime005_bin_test-macos
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - uses: actions-rs/toolchain@v1
         with:
