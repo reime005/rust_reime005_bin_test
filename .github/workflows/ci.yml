@@ -6,7 +6,7 @@ jobs:
   deploy:
     name: Deploy for ${{ matrix.os }}
     # needs: test
-    if: contains(github.ref, 'refs/tags')
+    if: contains(github.ref, 'refs/tags/*')
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
