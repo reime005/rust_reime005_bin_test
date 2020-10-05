@@ -34,12 +34,11 @@ jobs:
           profile: minimal
           toolchain: stable
 
-      - name: Build & Deploy to crates.io
+      - name: Build
         env:
           CRATES_TOKEN: ${{ secrets.CRATES_TOKEN }}
         run: |
           cargo build --release --locked
-          cargo publish --token $CRATES_TOKEN
 
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v1-release
