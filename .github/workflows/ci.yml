@@ -6,7 +6,7 @@ jobs:
   deploy:
     name: Deploy for ${{ matrix.os }}
     # needs: test
-    if: startsWith(github.ref, 'refs/tags/*')
+    if: startsWith(github.ref, 'refs/tags')
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
