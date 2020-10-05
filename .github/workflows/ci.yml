@@ -14,16 +14,16 @@ jobs:
           components: rustfmt, clippy
           override: true
 
-      - name: Check
-        uses: actions-rs/cargo@v1
-        with:
-          command: check
+      # - name: Check
+      #   uses: actions-rs/cargo@v1
+      #   with:
+      #     command: check
 
-      - name: Rust Format Check
-        uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args: -- --check
+      # - name: Rust Format Check
+      #   uses: actions-rs/cargo@v1
+      #   with:
+      #     command: fmt
+      #     args: -- --check
 
       - name: Clippy Lint Check
         uses: actions-rs/clippy-check@v1
